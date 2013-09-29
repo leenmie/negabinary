@@ -1,4 +1,4 @@
 negabinary
 ==========
 
-Some function to manipulate negabinary
+Some functions to manipulate negabinary
