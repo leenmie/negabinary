@@ -54,11 +54,11 @@ def add_two_negabinary(A, B):
         _sum = A[i] + B[i] + carry
         _res, carry = lookup_table[_sum]
         result.append(_res)
-    while carry != 0:
-        _res, carry = lookup_table[_sum]
-        result.append(_res)
+    while carry!=0:        
+        _res, carry = lookup_table[carry]
+        result.append(_res)        
     """remove most significant 0 bits"""
-    for k in xrange(len(A)-1,-1,-1):
+    for k in xrange(len(result)-1,-1,-1):
         if result[k]!=0:
             break
     return result[:k+1]
